@@ -17,24 +17,23 @@ public class Main {
         char[] iterArray = new char[4];
         char[] maxArray = new char[4];
         char[] minArray = new char[4];
-        char[] temp = new char[4];
         iterArray = kapInput.toCharArray();
 
         String checkArray = "";
         int iterCount = 0;
         int iterValue = 0;
 
-        for (int ii = 10; ii > 0; ii--) {
+        while (true) {
 
             if (Arrays.toString(iterArray).equals("[6, 1, 7, 4]")) {
-                System.out.println(iterCount + "| EXIT | " + Arrays.toString(iterArray));
+                // System.out.println(iterCount + "| EXIT | " + Arrays.toString(iterArray));
                 return iterCount;
             }
 
             for (int i = 0; i < 3; i++) {
                 checkArray = checkArray + (iterArray[i]);
             }
-            System.out.println(iterCount + "| DEBUG iteArray | " + Arrays.toString(iterArray));
+            // System.out.println(iterCount + "| DEBUG iteArray | " + Arrays.toString(iterArray));
 
             minArray = iterArray;
             sort(minArray);
@@ -43,8 +42,8 @@ public class Main {
                 maxArray[i] = minArray[3-i];
             }
 
-            System.out.println(iterCount + "| DEBUG maxArray | " + Arrays.toString(maxArray));
-            System.out.println(iterCount + "| DEBUG minArray | " + Arrays.toString(minArray));
+            // System.out.println(iterCount + "| DEBUG maxArray | " + Arrays.toString(maxArray));
+            // System.out.println(iterCount + "| DEBUG minArray | " + Arrays.toString(minArray));
 
             int minValue = 0;
             int maxValue = 0;
@@ -62,6 +61,5 @@ public class Main {
 
             iterCount++;
         }
-        return 0;
     }
 }
